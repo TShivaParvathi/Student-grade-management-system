@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Grade Management System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Student Grade Management System</h2>
+
+    <form id="gradeForm">
+      <input type="text" id="name" placeholder="Student Name" required>
+      <input type="number" id="mark1" placeholder="Mark 1" min="0" max="100" required>
+      <input type="number" id="mark2" placeholder="Mark 2" min="0" max="100" required>
+      <input type="number" id="mark3" placeholder="Mark 3" min="0" max="100" required>
+      <button type="submit">Add Student</button>
+    </form>
+
+    <div class="actions">
+      <button onclick="loadStudents()">📥 Load Students</button>
+      <button onclick="clearAll()">🗑️ Clear All Records</button>
+    </div>
+
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="🔍 Search student by name..." oninput="searchStudents()">
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Marks</th>
+          <th>Average</th>
+          <th>Grade</th>
+          <th>Source</th>
+        </tr>
+      </thead>
+      <tbody id="studentTable"></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
